@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>GWP Javascript Exercise 1, Name:...</title>
+</head>
+<body>
+  <script>
+    //Teil A
+    console.log("Hello World!");
+    //alert("Hello World");
+    var text = "Mein Name ist";
+    console.log(text);
+	var text42 = text + 42;
+    console.log(text42);
+    //gibt variable text und 42 aus
+    var text42 = text * 42;
+    console.log(text42);
+    //gibt NaN aus, probiert text und 42 zu multiplizieren 
+    
+	//Teil B
+	var namen = ["Peter", "Harry", "Gretchen", "Dietmar", "Max"];
+    for( var i=0; i < namen.length; i++) console.log(namen[i]);
+    
+	for( var i=0; i < namen.length; i++){
+    	var fulltext = text + namen[i];
+        console.log(fulltext);
+    }
+  
+    var nummern = [];
+    for( var i=0; i < 101; i++){
+		nummern.push(i);
+    }
+    
+    var quadrate = [];
+    for( var i=0; i < nummern.length; i++){
+		quadrate.push(nummern[i] * nummern[i]);
+    }
+    
+    for( var i=0; i < quadrate.length; i++){
+		console.log(quadrate[i]);
+    }
+
+    //Teil C
+    var even = [];
+    for( var i=0; i < quadrate.length; i++){
+		if(quadrate[i] % 2 == 0) even.push(quadrate[i]);
+    }
+    console.log(even.length);
+
+    //Teil D
+    function printDieter(){
+    	console.log("Mein Name ist Dieter");
+    }
+    printDieter();
+    printDieter();
+
+    function printName(name){
+    	console.log(name);
+    }
+    for( var i=0; i < namen.length; i++) printName(namen[i]);
+    
+	function calculateSquare(value){
+    	var out = value * value;
+        return out;
+    }
+
+    var quadrate2 = [];
+    for( var i=0; i < nummern.length; i++){
+		quadrate2.push(calculateSquare(nummern[i]));
+    }
+    
+    function isEven(value){
+    	if (value % 2 == 0) return 1;
+      	else return 0;
+    }
+    
+    var count = 0;
+    for( var i=0; i < quadrate2.length; i++){
+		count += isEven(quadrate2[i]);
+        	console.log(count);
+    }
+  	console.log(count);
+    // gleich Zahl wie in aufgabe C
+
+  </script>
+</body>
+</html>
