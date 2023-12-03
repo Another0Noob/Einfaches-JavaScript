@@ -43,7 +43,7 @@
     //Teil C
     var even = [];
     for( var i=0; i < quadrate.length; i++){
-		if(quadrate[i] % 2 == 0) even.push(quadrate[i]);
+		if(quadrate[i] % 2 == 0 && quadrate[i] != 0) even.push(quadrate[i]);
     }
     console.log(even.length);
 
@@ -70,7 +70,7 @@
     }
     
     function isEven(value){
-    	if (value % 2 == 0) return 1;
+    	if (value % 2 == 0 && value != 0) return 1;
       	else return 0;
     }
     
